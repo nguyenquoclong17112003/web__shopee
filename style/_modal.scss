@@ -1,0 +1,356 @@
+//! Modal
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: none;
+  animation: fadeIn linear 0.5s;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal__container {
+  margin: auto;
+  z-index: 2;
+  animation: growth ease-in 0.25s;
+  max-width: calc(100% - 32px);
+}
+
+.auth-form {
+  border-radius: 5px;
+  max-width: 100%;
+  width: 500px;
+  background-color: $white-color;
+  overflow: hidden;
+}
+
+.auth-form-inner {
+  padding: 1px 28px;
+}
+
+.modal__sign {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal__sign-register {
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: $text-color;
+}
+
+.modal__sign-login {
+  font-size: 1.6rem;
+  color: $primary-color;
+  font-weight: 500;
+}
+
+.auth__form-group {
+  margin-top: 2px;
+}
+
+.modal__input {
+  width: 100%;
+  padding: 12px 9px;
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+  outline: none;
+}
+
+.auth-form__social {
+}
+
+.auth-form__policy {
+  color: $black-color;
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.auth-form-policy-link {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+.auth-form-btn {
+  display: flex;
+  margin-top: 80px;
+  justify-content: flex-end;
+}
+
+.btn {
+  @include btn-all();
+  color: $text-color;
+  background-color: $white-color;
+  margin-right: 4px;
+}
+
+.btn-primary {
+  @include btn-all();
+  background-color: $primary-color;
+  color: $white-color;
+}
+
+.btn:hover {
+  background-color: #e3dada;
+}
+
+.auth-form-connect {
+  background-color: #f5f5f5;
+  margin-top: 20px;
+  padding: 15px 35px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.auth-form-link-fb {
+  background-color: #253b67;
+  color: $white-color;
+  @include btn-all();
+  padding: 0 18px;
+}
+
+.auth-form-link-gg {
+  @include btn-all();
+  background-color: $white-color;
+  color: #949494;
+  padding: 0 18px;
+}
+
+.auth-icon {
+  font-size: 1.8rem;
+}
+
+.auth-form-connect-spam {
+  margin: 0 24px;
+}
+
+.auth-form__help {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.auth-form__help-link {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #9c9c9c;
+}
+
+.auth-form__help-link-color {
+  color: $primary-color;
+}
+
+.auth-form__help-seperate {
+  display: block;
+  border-left: 1px solid #dbdbdb;
+  height: 15px;
+  margin: 0 12px;
+}
+
+//! Buy Product Modal
+
+.auth-form__product {
+  width: 400px;
+  background-color: $white-color;
+  min-height: 300px;
+  border-radius: 3px;
+}
+
+.auth-form__product-header {
+  height: 40px;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-product-icon {
+  padding: 0px 5px;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-left: 9px;
+}
+
+.cart-product-icon {
+  font-size: 1.6rem;
+  margin-right: 11px;
+  color: #fff;
+}
+
+.auth-form-group {
+  padding: 24px 22px;
+}
+
+.auth-form-group__frames {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shirt-type-btn {
+  margin-right: auto;
+  margin-left: 54px;
+  @include btn-all();
+  border: 1px solid #e8e8e8;
+  height: 33px;
+  min-width: 115px;
+  background: transparent;
+}
+.auth-form-group__sample {
+  font-size: 1.4rem;
+  color: #75758b;
+}
+.auth-form-group__hoodie {
+  font-size: 1.3rem;
+  color: #64646e;
+}
+
+.shirt-type-btn:hover {
+  border: 1px solid #ee4d2d;
+  color: #ee4d2d;
+}
+
+.auth-form-group__nike {
+  margin-left: 4px;
+  line-height: 1.3rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  font-family: emoji;
+}
+
+.auth-form-group__size-all {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.auth-form-group__contain-size {
+  display: flex;
+  margin-right: auto;
+  margin-left: 56px;
+}
+
+.auth-form-group__size {
+  font-size: 1.4rem;
+  color: #75758b;
+}
+
+.btn-size-S {
+  @include btn-all();
+  min-width: 81px;
+  height: 33px;
+  background-color: transparent;
+
+  border: 1px solid #e8e8e8;
+}
+
+.btn-size-M:hover,
+.btn-size-L:hover,
+.btn-size-S:hover {
+  border: 1px solid #ee4d2d;
+  color: #ee4d2d;
+}
+
+.btn-size-M {
+  @include btn-all();
+  min-width: 81px;
+  height: 33px;
+  background-color: transparent;
+
+  border: 1px solid #e8e8e8;
+  margin: 0 10px;
+}
+
+.btn-size-L {
+  @include btn-all();
+  min-width: 81px;
+  height: 33px;
+  background-color: transparent;
+  border: 1px solid #e8e8e8;
+}
+
+.auth-form-group-total {
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+  justify-content: space-between;
+}
+
+.auth-form-group-quantity {
+  font-size: 1.4rem;
+  color: #75758b;
+}
+
+.auth-form-group-input {
+  margin-right: auto;
+  margin-left: 26px;
+  border-radius: 3px;
+}
+.input-number {
+  border: 1px solid #e8e8e8;
+  width: 52px;
+  padding: 0 8px;
+  height: 32px;
+  font-size: 1.3rem;
+  border-radius: 3px;
+}
+
+.auth-form-group__confirm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.auth-form-group__confirm-buy-btn {
+  margin-right: auto;
+  margin-left: 15px;
+}
+
+.auth-form-group__confirm-cart-btn {
+  @include btn-all();
+  border-radius: 2px;
+  background-color: rgba(rgb(241, 122, 45), 0.2);
+  border: 1px solid #ee4d2d;
+  height: 39px;
+}
+
+.auth-form-group__confirm-cart-btn:hover {
+  background-color: #fff5f1;
+}
+
+.icon-add-cart.fas.fa-cart-plus {
+  color: #ee4d2d;
+  margin-right: 9px;
+  font-size: 1.3rem;
+}
+
+.auth-form-group-add-cart {
+  font-size: 1.3rem;
+  color: #ee4d2d;
+}
+
+.auth-form-group__confirm-buy-btn {
+  @include btn-all();
+  background-color: #ee4d2d;
+  color: $white-color;
+  height: 39px;
+  min-width: 110px;
+  font-size: 1.3rem;
+}
+
+.auth-form-group__confirm-buy-btn:hover {
+  background-color: #f05d40;
+}
